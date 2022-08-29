@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WinFormsMVP</RootNamespace>
     <AssemblyName>WinFormsMVP</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -111,15 +111,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CustomerXmlRepository.cs" />
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\ICustomerRepository.cs" />
+    <Compile Include="Model\Concrete\CustomerXmlRepository.cs" />
+    <Compile Include="Model\Entity\Customer.cs" />
+    <Compile Include="Model\Abstract\ICustomerRepository.cs" />
     <Compile Include="Presenter\CustomerPresenter.cs" />
-    <Compile Include="View\ICustomerView.cs" />
-    <Compile Include="View\CustomerForm.cs">
+    <Compile Include="View\Abstract\ICustomerView.cs" />
+    <Compile Include="View\Concrete\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CustomerForm.Designer.cs">
+    <Compile Include="View\Concrete\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -134,7 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\CustomerForm.resx">
+    <EmbeddedResource Include="View\Concrete\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
